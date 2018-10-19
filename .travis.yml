@@ -16,8 +16,7 @@ script:
   - yarn build
   - yarn test
 after_success:
-  - yarn add travis-deploy-once@5 semantic-release@15
-  - yarn travis-deploy-once "yarn semantic-release"
+  - npx travis-deploy-once@5 "npx semantic-release@15"
 branches:
   only:
     - master
