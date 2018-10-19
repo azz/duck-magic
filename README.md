@@ -32,7 +32,7 @@ With `npm`:
 npm install --save duck-magic
 ```
 
-# Example
+## Example
 
 ```js
 // ducks/math.js
@@ -75,7 +75,7 @@ import * as math from './math';
 
 const ducks = {
   math,
-  // the rest of your reducers...
+  // the rest of your ducks...
 };
 
 export const rootReducer = createRootReducer(ducks);
