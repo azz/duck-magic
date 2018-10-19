@@ -109,14 +109,14 @@ export default connect(
 
 ## API
 
-## `composeActionCreators(ducks, [extraActionCreators])
+## `composeActionCreators(ducks, [extraActionCreators])`
 
 Given an object containing ducks as values, returns another object whose values are the `actions` property of each duck.
 
-## `composeSelectors(ducks, [extraSelectors])
+## `composeSelectors(ducks, [extraSelectors])`
 
 Given an object containing ducks as values, returns another object whose values are the `selectors` property of each duck. The portion of state under the duck's key will be passed to the underlying selector.
 
-## `createRootReducer(ducks, [extraReducers])
+## `createRootReducer(ducks, [extraReducers])`
 
 Given an object containing ducks as values, returns a function that is the result of calling Redux's `combineReducers` on all the `reducer`s.
