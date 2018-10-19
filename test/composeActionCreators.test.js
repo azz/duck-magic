@@ -1,4 +1,4 @@
-import { composeActionCreators } from '..';
+import { composeActionCreators } from '../src';
 
 test('composes multiple action creators', () => {
   const ducks = {

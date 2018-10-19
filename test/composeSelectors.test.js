@@ -1,4 +1,4 @@
-import { composeSelectors } from '..';
+import { composeSelectors } from '../src';
 
 test('composes multple selectors', () => {
   const ducks = {

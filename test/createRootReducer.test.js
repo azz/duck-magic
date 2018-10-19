@@ -1,4 +1,4 @@
-import { createRootReducer } from '..';
+import { createRootReducer } from '../src';
 
 test('returns a function combining reducers', () => {
   const reducer = createRootReducer({
