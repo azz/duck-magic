@@ -4,6 +4,11 @@
   "description": "Utilities for Ducks - Modular Redux",
   "repository": "azz/duck-magic",
   "author": "Lucas Azzola <@azz>",
+  "keywords": [
+    "redux",
+    "ducks",
+    "modular"
+  ],
   "main": "./dist",
   "license": "MIT",
   "files": [
@@ -57,7 +62,7 @@
   "babel": {
     "presets": [
       [
-        "env",
+        "@babel/preset-env",
         {
           "targets": {
             "node": "6.10"
