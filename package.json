@@ -10,17 +10,19 @@
     "modular"
   ],
   "main": "./dist",
+  "typings": "./types",
   "license": "MIT",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "dependencies": {
     "redux": "^4.0.1"
   },
   "scripts": {
-    "build": "babel src -d dist",
+    "build": "babel src -d dist --copy-files",
     "test": "jest",
-    "lint": "eslint . --ignore-path=.gitignore",
+    "lint": "eslint . --ignore-path=.gitignore && dtslint types",
     "precommit": "pretty-quick --staged"
   },
   "devDependencies": {
@@ -28,6 +30,7 @@
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
+    "dtslint": "^0.3.0",
     "eslint": "^5.7.0",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-jest": "^21.25.1",
