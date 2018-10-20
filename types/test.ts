@@ -13,8 +13,8 @@ const ducks = {
     },
     reducer: (state, action) => state,
     actions: {
-      setA: a => ({ type: 'SET_A', payload: a }),
-      setB: b => ({ type: 'SET_B', payload: b }),
+      setA: (a: string) => ({ type: 'SET_A', payload: a }),
+      setB: (b: number) => ({ type: 'SET_B', payload: b }),
     },
   },
 };
@@ -25,7 +25,8 @@ composeActionCreators(); // $ExpectError
 
 const actionsA = composeActionCreators(ducks);
 actionsA.john;
-actionsA.john.setA(1);
+actionsA.john.setA(1); // $ExpectError
+actionsA.john.setA('a');
 
 const actionsB = composeActionCreators(ducks, {
   setC: () => ({ type: 'SET_C' }),
@@ -48,7 +49,7 @@ composeSelectors(); // $ExpectError
 const selectorsA = composeSelectors(ducks);
 selectorsA.john;
 selectorsA.john.getA(); // $ExpectError
-// selectorsA.john.getFoo({}); // $ExpectError
+selectorsA.john.getFoo({}); // $ExpectError
 selectorsA.john.getA({});
 
 const selectorsB = composeSelectors(ducks, { getC: state => state.c });
